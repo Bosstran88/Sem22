@@ -22,6 +22,8 @@ public class Controller {
             System.out.println("Số dư tài khoản không đủ");
         }else {
             System.out.println("Chuyển khoản Thành công");
+            balanceNumber= balanceNumber-money;
+            System.out.println("So du con lai: "+ balanceNumber);
         }
         return balanceNumber;
     }
@@ -30,12 +32,18 @@ public class Controller {
             int id;
         System.out.println("Nhập stk thụ hưởng:");
         id = input.nextInt();
-        IdGenerate.Account s = list.findById(id);
+        System.out.print("So tien: ");
+        int money = input.nextInt();
+        transfer(money);
+
+
 
 
     }
     public void getHistory(){
         //In danh sách lịch sử giao dịch
+        List<TransactionHistory> listHistory = new ArrayList<TransactionHistory>();
+        TransactionHistory.Show();
 
     }
     //Định dạng số tiền theo mình mong muốn
