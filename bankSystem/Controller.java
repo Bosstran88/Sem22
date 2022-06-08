@@ -42,9 +42,7 @@ public class Controller {
     }
     public void getHistory(){
         //In danh sách lịch sử giao dịch
-        List<TransactionHistory> listHistory = new ArrayList<TransactionHistory>();
-        TransactionHistory.Show();
-
+        System.out.println("listHistory");
     }
     //Định dạng số tiền theo mình mong muốn
     public static String formatMoney(long money){
